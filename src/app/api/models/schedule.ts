@@ -14,7 +14,9 @@ export interface Schedule {
   airstamp: string,
   runtime: number,
   image: Image | null,
-  summary: string,
+  summary: string | null,
   _links: Links,
-  _embedded: Show
+  _embedded: {
+    show: Show
+  }
 }
