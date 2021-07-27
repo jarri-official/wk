@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ListComponent } from './list/list.component';
 import { ListItemComponent } from './list-item/list-item.component';
 import { RouterModule } from '@angular/router';
+import { CardModule } from '../card/card.module';
 
 const COMPONENTS: Type<any>[] = [
   ListComponent,

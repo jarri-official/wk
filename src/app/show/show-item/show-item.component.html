@@ -1,1 +1,19 @@
-<p>show-item works!</p>
+<app-card>
+  <div class="show-item-content">
+    <div class="poster">
+      <img [src]="show?.image?.medium" [alt]="'Poster of ' + show?.name">
+    </div>
+    <div class="info">
+      <h1>{{show?.name}}</h1>
+      <p>{{show?.type}} - {{show?.genres?.join(', ')}}</p>
+      <p>Rating: {{show?.rating?.average}}</p>
+      <p>Premiered: {{show?.premiered}}</p>
+      <p>Language: {{show?.language}}</p>
+      <div class="summary"
+           [innerHTML]="summary"></div>
+    </div>
+  </div>
+  <div class="background">
+    <img [src]="show?.image?.medium" [alt]="'Poster of ' + show?.name">
+  </div>
+</app-card>

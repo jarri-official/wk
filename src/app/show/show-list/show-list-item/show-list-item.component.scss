@@ -1,3 +1,8 @@
+app-card {
+  position: relative;
+  width: 100%;
+}
+
 :host {
   ::ng-deep {
     mat-card {
@@ -6,19 +11,15 @@
   }
 }
 
-app-card {
-  position: relative;
-}
-
 .show-item-content {
   display: flex;
   flex-direction: row;
   position: relative;
   z-index: 2;
+}
 
-  .poster {
-    margin-right: 25px;
-  }
+.poster {
+  margin-right: 25px;
 }
 
 .background {

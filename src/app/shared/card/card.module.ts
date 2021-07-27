@@ -1,11 +1,10 @@
 import { NgModule, Type } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatRippleModule } from '@angular/material/core';
-
-import { CheckboxChipComponent } from './checkbox-chip/checkbox-chip.component';
+import { CardComponent } from './card/card.component';
+import { MatCardModule } from '@angular/material/card';
 
 const COMPONENTS: Type<any>[] = [
-  CheckboxChipComponent
+  CardComponent
 ];
 
 @NgModule({
@@ -14,11 +13,11 @@ const COMPONENTS: Type<any>[] = [
   ],
   imports: [
     CommonModule,
-    MatRippleModule
+    MatCardModule
   ],
   exports: [
     ...COMPONENTS
   ]
 })
-export class FormModule {
+export class CardModule {
 }

@@ -41,7 +41,7 @@ export class ShowService {
         title: currentShowItem.name,
         season: item.season,
         summary: currentShowItem.summary,
-        imageUrl: currentShowItem.image.medium,
+        image: currentShowItem.image,
         airstamp: new Date(item.airstamp),
         genres: currentShowItem.genres
       };

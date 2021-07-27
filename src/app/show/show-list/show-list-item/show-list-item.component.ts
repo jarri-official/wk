@@ -1,14 +1,13 @@
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
-import { MappedShow } from '../../../show/model/mapped-show';
+import { Component, Input } from '@angular/core';
+import { MappedShow } from '../../model/mapped-show';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 @Component({
-  selector: 'app-list-item',
-  templateUrl: './list-item.component.html',
-  styleUrls: ['./list-item.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  selector: 'app-show-list-item',
+  templateUrl: './show-list-item.component.html',
+  styleUrls: ['./show-list-item.component.scss']
 })
-export class ListItemComponent {
+export class ShowListItemComponent {
   @Input() public show: MappedShow | undefined;
 
   constructor(private sanitizer: DomSanitizer) {

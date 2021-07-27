@@ -35,7 +35,10 @@ describe('ShowService', () => {
           title: 'Sesame Street',
           season: 51,
           summary: '<p><b>Sesame Street</b> is a widely recognized and perpetually daring experiment in educational children\'s programming. This show has taken popular-culture and turned it upside-down. The fast-paced advertisements that had parents of the new era worrying for their children were the basis for the original format of this show. The show has often satirized pop culture, and made itself easier for parents to watch along too. And thus, the positive impact this show has had on modern society is beyond another. No show is more recognized the world over by as many generations and walks of life. Shown in its original format or with changes to reflect a regional education focus, Sesame Street is now seen in over 140 countries. The show that Entertainment Weekly named the "20th Best Ever Show" has changed the education scene to focus on "entertainment". This has turned out to be a valuable theory that not only...</p>',
-          imageUrl: 'https://static.tvmaze.com/uploads/images/medium_portrait/222/555972.jpg',
+          image: {
+            'medium': 'https://static.tvmaze.com/uploads/images/medium_portrait/222/555972.jpg',
+            'original': 'https://static.tvmaze.com/uploads/images/original_untouched/222/555972.jpg'
+          },
           airstamp: new Date('2021-02-04T17:00:00+00:00'),
           genres: [
             'Children'
@@ -46,7 +49,10 @@ describe('ShowService', () => {
           title: 'WWE Main Event',
           season: 10,
           summary: '<p><b>WWE Main Event</b> is a professional wrestling television program produced by WWE that originally aired on Ion Television in the United States and it originally aired on the WWE Network now airing on Hulu.</p>',
-          imageUrl: 'https://static.tvmaze.com/uploads/images/medium_portrait/233/584404.jpg',
+          image: {
+            'medium': 'https://static.tvmaze.com/uploads/images/medium_portrait/233/584404.jpg',
+            'original': 'https://static.tvmaze.com/uploads/images/original_untouched/233/584404.jpg'
+          },
           airstamp: new Date('2021-02-04T17:00:00+00:00'),
           genres: [
             'Sports'

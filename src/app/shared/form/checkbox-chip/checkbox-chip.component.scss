@@ -1,0 +1,30 @@
+:host {
+  font-size: 1.1em;
+  display: flex;
+  margin-right: .5em;
+}
+
+label {
+  cursor: pointer;
+
+  input {
+    display: none;
+
+    &:checked {
+      + {
+        .chip {
+          background: #f64747;
+          color: #ffffff;
+        }
+      }
+    }
+
+    + {
+      .chip {
+        padding: .5em 1em;
+        background: #999999;
+        border-radius: 1.5em;
+      }
+    }
+  }
+}

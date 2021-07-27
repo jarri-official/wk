@@ -11,7 +11,7 @@ const routes: Routes = [
     component: ShowListComponent
   },
   {
-    path: ':id',
+    path: 'details/:id',
     component: ShowItemComponent,
     resolve: {
       show: ShowItemResolver

@@ -1,0 +1,50 @@
+:host {
+  $filtersPadding: 10px;
+  position: sticky;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  background: #fff;
+  padding: 1em $filtersPadding;
+  z-index: 3;
+  margin: {
+    right: -$filtersPadding;
+    left: -$filtersPadding;
+  }
+  border: {
+    style: none none solid none;
+    width: 1px;
+    color: #111111;
+  }
+}
+.genres {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.label {
+  font-size: 1.1em;
+  padding-right: .5em;
+}
+
+app-checkbox-chip {
+  margin: {
+    top: .25em;
+    bottom: .25em;
+  }
+}
+
+.genres-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  .genres-list-item {
+    margin-right: 1em;
+  }
+}

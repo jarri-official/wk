@@ -1,17 +1,15 @@
-<div *ngIf="isLoading$ | async; else loadedContent;"
-     class="loading">
-  Loading shows...
-</div>
+<ng-container *ngIf="isLoading$ | async; else loadedContent;">
+  <app-show-list-loader></app-show-list-loader>
+</ng-container>
 
 <ng-template #loadedContent>
-  <header class="filters">
-    Genres:
+  <ng-container *ngIf="showData">
+    <app-show-list-filters [genres]="showData.genres"></app-show-list-filters>
 
-    <app-checkbox-chip *ngFor="let genre of showData?.genres">{{genre}}</app-checkbox-chip>
-  </header>
-
-  <app-list>
-    <app-list-item *ngFor="let show of showData?.showList"
-                   [show]="show"></app-list-item>
-  </app-list>
+    <app-list>
+      <app-list-item *ngFor="let show of showData.showList">
+        <app-show-list-item [show]="show"></app-show-list-item>
+      </app-list-item>
+    </app-list>
+  </ng-container>
 </ng-template>

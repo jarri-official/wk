@@ -1,16 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
+
+html, body {
+  height: 100%;
+}
 
 body {
-  font-family: 'Lexend', sans-serif;
-  color: #111111;
+  font: {
+    family: 'Roboto', sans-serif;
+    weight: 300;
+  }
+}
+
+strong, h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
 }
 
 a {
   text-decoration: none;
-  color: #111111;
+  color: inherit;
 }
 
 .container {
   width: 90%;
   margin: auto;
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -1,0 +1,25 @@
+<app-card>
+  <div class="show-item-content">
+    <div class="poster">
+      <a [routerLink]="'/details/' + show?.id">
+        <img *ngIf="show?.image?.medium; else noPoster;" [src]="show?.image?.medium" [alt]="'Poster of ' + show?.title">
+      </a>
+      <ng-template #noPoster>
+        <a [routerLink]="'/details/' + show?.id" class="no-poster">
+          No Poster
+        </a>
+      </ng-template>
+    </div>
+    <div class="info">
+      <h2>
+        <a [routerLink]="'/details/' + show?.id">{{show?.title}}</a>
+      </h2>
+      <p>Season: {{show?.season}}</p>
+      <p>Air time: {{show?.airstamp | date: 'HH:mm'}}</p>
+      <div class="summary" [innerHTML]="summary"></div>
+    </div>
+  </div>
+  <div class="background">
+    <img [src]="show?.image?.medium" [alt]="'Poster of ' + show?.title">
+  </div>
+</app-card>
