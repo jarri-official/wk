@@ -2,6 +2,7 @@ import { NgModule, Type } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ListComponent } from './list/list.component';
 import { ListItemComponent } from './list-item/list-item.component';
+import { RouterModule } from '@angular/router';
 
 const COMPONENTS: Type<any>[] = [
   ListComponent,
@@ -13,7 +14,8 @@ const COMPONENTS: Type<any>[] = [
     ...COMPONENTS
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   exports: [
     ...COMPONENTS

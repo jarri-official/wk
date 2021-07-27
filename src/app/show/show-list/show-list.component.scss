@@ -1,0 +1,22 @@
+.filters {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  padding: 2em 0;
+  border: {
+    style: none none solid none;
+    width: 1px;
+    color: #111111;
+  }
+}
+
+app-list {
+  padding-top: 2em;
+  display: flex;
+  flex-direction: column;
+}
+
+.loading {
+  text-align: center;
+  padding-top: 3em;
+}

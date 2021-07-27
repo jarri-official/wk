@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
 import { ShowListComponent } from './show-list/show-list.component';
 import { ShowItemComponent } from './show-item/show-item.component';
+import { ShowItemResolver } from './show-item/show-item.resolver';
 
 const routes: Routes = [
   {
@@ -10,7 +12,10 @@ const routes: Routes = [
   },
   {
     path: ':id',
-    component: ShowItemComponent
+    component: ShowItemComponent,
+    resolve: {
+      show: ShowItemResolver
+    }
   }
 ];
 

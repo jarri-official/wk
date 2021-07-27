@@ -1,3 +1,15 @@
-<app-list>
-  <app-list-item></app-list-item>
-</app-list>
+<header class="filters">
+  Filters...
+</header>
+
+<div *ngIf="isLoading$ | async; else showList;"
+     class="loading">
+  Loading shows...
+</div>
+
+<ng-template #showList>
+  <app-list>
+    <app-list-item *ngFor="let show of showData?.showList"
+                   [show]="show"></app-list-item>
+  </app-list>
+</ng-template>

@@ -1,1 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;500&display=swap');
+
+body {
+  font-family: 'Lexend', sans-serif;
+  color: #111111;
+}
+
+a {
+  text-decoration: none;
+  color: #111111;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}

@@ -3,9 +3,9 @@ import { HttpClient } from '@angular/common/http';
 
 import { Observable } from 'rxjs';
 
-import { ApiModule } from '../api.module';
 import { Show } from '../models/show';
 import { Schedule } from '../models/schedule';
+import { ApiModule } from '../api.module';
 
 @Injectable({
   providedIn: ApiModule

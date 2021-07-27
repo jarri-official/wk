@@ -1,4 +1,5 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { MappedShow } from '../../../show/model/mapped-show';
 
 @Component({
   selector: 'app-list-item',
@@ -7,4 +8,5 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ListItemComponent {
+  @Input() public show: MappedShow | undefined;
 }

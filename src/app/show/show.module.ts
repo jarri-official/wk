@@ -6,7 +6,6 @@ import { ShowListComponent } from './show-list/show-list.component';
 import { ShowItemComponent } from './show-item/show-item.component';
 import { SharedModule } from '../shared/shared.module';
 
-
 @NgModule({
   declarations: [
     ShowListComponent,
@@ -15,7 +14,7 @@ import { SharedModule } from '../shared/shared.module';
   imports: [
     CommonModule,
     ShowRoutingModule,
-    SharedModule
+    SharedModule,
   ]
 })
 export class ShowModule { }
