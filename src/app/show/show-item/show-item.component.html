@@ -1,19 +1,20 @@
 <app-card>
   <div class="show-item-content">
-    <div class="poster">
+    <app-show-poster [show]="show"></app-show-poster>
+    <!--<div class="poster">
       <img [src]="show?.image?.medium" [alt]="'Poster of ' + show?.name">
-    </div>
+    </div>-->
     <div class="info">
       <h1>{{show?.name}}</h1>
       <p>{{show?.type}} - {{show?.genres?.join(', ')}}</p>
-      <p>Rating: {{show?.rating?.average}}</p>
-      <p>Premiered: {{show?.premiered}}</p>
-      <p>Language: {{show?.language}}</p>
-      <div class="summary"
+      <p *ngIf="show?.rating?.average">Rating: {{show?.rating?.average}}</p>
+      <p *ngIf="show?.premiered">Premiered: {{show?.premiered}}</p>
+      <p *ngIf="show?.language">Language: {{show?.language}}</p>
+      <div *ngIf="summary" class="summary"
            [innerHTML]="summary"></div>
     </div>
   </div>
-  <div class="background">
+  <div class="background" *ngIf="show?.image?.medium">
     <img [src]="show?.image?.medium" [alt]="'Poster of ' + show?.name">
   </div>
 </app-card>

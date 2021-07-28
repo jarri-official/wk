@@ -15,9 +15,21 @@ app-card {
   flex-direction: row;
   position: relative;
   z-index: 2;
+}
 
-  .poster {
-    margin-right: 25px;
+.poster {
+  margin-right: 25px;
+
+  .no-poster {
+    display: flex;
+    width: 210px;
+    height: 100%;
+    background: #d7d7d7;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 2em;
   }
 }
 

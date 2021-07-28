@@ -1,0 +1,9 @@
+<a *ngIf="show?.image?.medium; else noPoster;"
+   [routerLink]="'/details/' + show?.id">
+  <img [src]="show?.image?.medium" [alt]="'Poster of ' + show?.name">
+</a>
+<ng-template #noPoster>
+  <a [routerLink]="'/details/' + show?.id" class="no-poster">
+    Sorry, there is no poster to show
+  </a>
+</ng-template>

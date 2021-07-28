@@ -2,10 +2,10 @@ import { Image } from '../../api/models/partials/image';
 
 export interface MappedShow {
   id: number;
-  title: string;
+  name: string;
   season: number;
   summary: string;
   airstamp: Date;
   genres: string[];
-  image: Image;
+  image?: Image;
 }

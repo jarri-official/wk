@@ -7,6 +7,10 @@ const routes: Routes = [
     loadChildren: () => import('./show/show.module').then(m => m.ShowModule)
   },
   {
+    path: 'not-found',
+    loadChildren: () => import('./not-found/not-found.module').then(m => m.NotFoundModule)
+  },
+  {
     path: '**',
     redirectTo: '/'
   }

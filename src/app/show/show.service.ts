@@ -38,7 +38,7 @@ export class ShowService {
 
       const show: MappedShow = {
         id: currentShowItem.id,
-        title: currentShowItem.name,
+        name: currentShowItem.name,
         season: item.season,
         summary: currentShowItem.summary,
         image: currentShowItem.image,

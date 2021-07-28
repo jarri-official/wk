@@ -7,7 +7,7 @@
     <app-show-list-filters [genres]="showData.genres"></app-show-list-filters>
 
     <app-list>
-      <app-list-item *ngFor="let show of showData.showList">
+      <app-list-item *ngFor="let show of showData.showList | showListGenreFilter:selectedGenres">
         <app-show-list-item [show]="show"></app-show-list-item>
       </app-list-item>
     </app-list>
