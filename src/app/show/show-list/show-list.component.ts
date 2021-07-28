@@ -28,7 +28,7 @@ export class ShowListComponent implements OnInit, OnDestroy {
   public ngOnInit(): void {
     this.setInitialDate();
     this.getShowData();
-    this.watchDateChange();
+    this.handleFiltersChange();
   }
 
   public ngOnDestroy(): void {
@@ -60,7 +60,7 @@ export class ShowListComponent implements OnInit, OnDestroy {
     this.isLoading$.next(false);
   }
 
-  private watchDateChange(): void {
+  private handleFiltersChange(): void {
     this.onFiltersLoaded$()
       .pipe(
         switchMap(() => this.route.queryParams),
